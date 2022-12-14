@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.css">
+    <title>Homepage</title>
+</head>
+
+<style>
+    
+    body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #222629;
+    color: white;
+    margin: 0;
+}
+
+hr {
+    border-top: 1px solid white;
+}
+
+.container {
+    padding: 0 5%;
+}
+
+.title {
+    display: flex;
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+.topnavbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+.main span {
+    font-size: 20px;
+}
+.main p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+.info {
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.info span {
+    color: #86c232;
+    font-size: 20px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 2;
+    margin-top: 70px;
+    margin-right: 0px;
+    background-color: aliceblue;
+    color: black;
+}
+.footer a{
+    color: rgb(8, 8, 8);
+    display: block;
+}
+.footer span {
+    font-size: 20px;
+    color: black;
+}
+/* navigation bar */
+ul{
+    list-style-type: none;
+    margin: 30px 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-evenly;
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+}
+
+
+li a,.dropbtn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px 50px;
+}
+
+li a:hover, .dropdown:hover {
+    background-color: #61892f
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:  #474b4f;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* image slider */
+.slider {
+    text-align: center;
+}
+.slider img {
+    width: 50%;
+}
+</style>
+
+<body>
+
+    <div class="container">
+        
+        <div class="title">
+            <div class="container topnavbar">
+                <div class="loggo lg">
+                    <img width="70" src="image/logo.png" alt="">
+                </div>
+        </div>
+            <span class="heading">Student Internship Management System</span>
+            
+        </div>
+        
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                
+                <li class="dropdown" onclick="toggleDisplay('1')">
+                    <a href="#" class="dropbtn">Admin
+                        <span class="fa fa-angle-down"></span>
+                    </a>
+                    <div class="dropdown-content" id="1">
+                        <a href="login.php">Admin Login</a>
+                        
+                        
+                    </div>
+                </li>
+                <li class="dropdown" onclick="toggleDisplay('2')">
+                    <a href="#" class="dropbtn">Student
+                        <span class="fa fa-angle-down"></span>
+                    </a>
+                    <div class="dropdown-content" id="2">
+                        <a href="student_registration.html">Sign Up</a>
+                        <a href="student_login.php">Login</a>
+                        <a href="student_login.php">Apply for internship</a>
+                        <a href="student_login.php">Check results</a>
+                        
+                    </div>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="contact_us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slider">
+            <img src="image/image2.jpg" class="slider-image" alt="img">
+        </div>
+
+        <div class="main">
+            <span><b>About SANTECH Ltd</b></span>
+
+            <p>SAN TECH was founded by young Rwandan Software Engineers to contribute to the national and regional IT
+                sector, driving technology evolution towards next level in Rwanda and abroad. We sharpening skills of
+                Rwandan to use technology in thinking about invention and innovation in product development and virtual
+                reality.</p> 
+
+            <div class="info">
+                <div>
+                    <span><b>Servicess</b></span>
+                    <hr>
+                    <p>Software Development</p>
+                        <p>Graphic design</p>
+                        <p>Electronic maintenance</p>
+                        <p> </p>
+                </div>
+                <div>
+                    <span><b>Achievement</b></span> <hr>
+                    <p>The prize or other marks of recognition given in honor of an achievement of SAN TECH LTD. This includes award from Partners, Incubations, Grants, accord, concede, Accelerators, recognitions, Achievements, high-quality service , work completion and business administration managements.
+
+                        MORE ACHIEVEMENTS</p>
+                </div>
+                <div>
+                <span><b>OUR STRENGTH</b></span><hr>
+                        <p>Virtual Reality (VR) Technology Research and </p>
+                        <p>Product Development Tech Tech </p>
+                        <p>(Innovation / Carreer) Development Hub</p>
+                    </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            
+            <div class="footer--contact">
+                <span><b>Contact Info</b></span>
+                <p>Nyarugenge, 11 KN 89 St, Kigali-Rwanda</p>
+                <p>info@santechrwanda.com /santechrw@gmail.com</p>
+                <p>(+250) 783250033 / (+250) 780309833</p>
+            </div>
+            <div class="footer--info">
+                <span><b>Important Links</b></span>
+                <a href="index.html">Home</a>
+                <a href="about_us.html">About us</a>
+                <a href="login.php">Results</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login Page</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<style>
+
+body{
+    margin: 0;
+    background-color: #222629;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 10px;
+}
+.topnavbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+.main{
+    display: grid;
+    grid-template-rows: 80vh;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.login{
+    padding: 10px;
+    margin-left:250px;
+    width:100%;
+}
+
+
+/* form */
+input,select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    align:center;
+}
+
+input[type=email],input[type=password],select{
+    background-color: #474b4f;
+    color: white;
+    border: none;
+    font-size: 100%;
+    letter-spacing: 0.2em;
+}
+
+input[type=submit]{
+    background-color:green;
+    color: white;
+    border: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 16px;
+    width:100px;
+    margin-left:200px;
+
+}
+
+input[type=submit]:hover{
+    background-color: #86c232;
+    color: white
+}
+
+fieldset{
+    font-size: 20px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+}
+
+
+
+hr {
+    border-top: 1px solid white;
+}
+
+.container {
+    padding: 0 5%;
+}
+
+.title {
+    display: flex;
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+
+.main span {
+    font-size: 20px;
+}
+.main p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+.info {
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.info span {
+    color: #86c232;
+    font-size: 20px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 2;
+    margin-top: 70px;
+    margin-right: 0px;
+    background-color: aliceblue;
+    color: black;
+}
+.footer a{
+    color: white;
+    display: block;
+}
+.footer span {
+    font-size: 20px;
+}
+/* navigation bar */
+ul{
+    list-style-type: none;
+    margin: 30px 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-evenly;
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+}
+
+
+li a,.dropbtn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px 50px;
+}
+
+li a:hover, .dropdown:hover {
+    background-color: #61892f
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:  #474b4f;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+<body>
+    <<div class="container">
+        <div class="title">
+        <div class="container topnavbar">
+                <div class="loggo lg">
+                    <img width="70" src="image/logo.png" alt="">
+                </div>
+        </div>
+            <span class="heading">Student Internship Management System</span>
+        </div>
+        
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                
+                <li class="dropdown" onclick="toggleDisplay('1')">
+                    <a href="#" class="dropbtn">Admin
+                        <span class="fa fa-angle-down"></span>
+                    </a>
+                    <div class="dropdown-content" id="1">
+                        <a href="login.php">Admin Login</a>
+                        
+                        
+                    </div>
+                </li>
+                <li class="dropdown" onclick="toggleDisplay('2')">
+                    <a href="#" class="dropbtn">Student
+                        <span class="fa fa-angle-down"></span>
+                    </a>
+                    <div class="dropdown-content" id="2">
+                        <a href="student_login.php">Sign Up</a>
+                        <a href="student_login.php">Login</a>
+                        <a href="student_login.php">Apply for internship</a>
+                        <a href="student_login.php">Check results</a>
+                        
+                    </div>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="contact_us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
+    <div class="main">
+        <div class="login">
+            <form action="dashboard.php" method="post" name="login">
+                <fieldset>
+                    <legend class="heading">Student Login</legend>
+                    <label>Email</label>
+                    <input type="email" name="userid" placeholder="Email" autocomplete="off">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Password" autocomplete="off">
+                    <input type="submit" value="Login">
+                </fieldset>
+            </form>    
+        </div>
+        
+    </div>
+    <div class="footer">
+            
+            <div class="footer--contact">
+                <span><b>Contact Info</b></span>
+                <p>Nyarugenge, 11 KN 89 St, Kigali-Rwanda</p>
+                <p>info@santechrwanda.com /santechrw@gmail.com</p>
+                <p>(+250) 783250033 / (+250) 780309833</p>
+            </div>
+            <div class="footer--info">
+                <span><b>Important Links</b></span>
+                <a href="index.html">Home</a>
+                <a href="about_us.html">About us</a>
+                <a href="login.php">Results</a>
+            </div>
+        </div>
+</body>
+</html>
+
